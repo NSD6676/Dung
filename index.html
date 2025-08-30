@@ -32,10 +32,10 @@ https://nsd6676.github.io/Dung/
     <table>
         <thead>
             <th>STT update!!!</th>
-            <th>Name upadte</th>
-            <th>Address update</th>
-            <th>Check update</th>
-            <th>Go update</th>
+            <th>Name upadte 4</th>
+            <th>Address update 3</th>
+            <th>Check update 2</th>
+            <th>Go update 1</th>
         </thead>
         <tbody>
             <tr>
@@ -60,20 +60,20 @@ https://nsd6676.github.io/Dung/
         </tbody>
     </table>
     <script>
-  // Check every 10 seconds for changes to the file
-  setInterval(() => {
-    fetch(window.location.href, { cache: "no-store" })
-      .then(response => response.text())
-      .then(newContent => {
-        // Get current HTML content
-        let currentContent = document.documentElement.innerHTML;
-        if (newContent !== currentContent) {
-          console.log("Update detected, reloading...");
-          location.reload(); // Auto-refresh the page
-        }
-      });
-  }, 10000); // 10 seconds
-</script>
+    // Check every 10 seconds for changes to the file
+    setInterval(() => {
+        fetch(window.location.href, { cache: "no-store" })
+        .then(response => response.text())
+        .then(newContent => {
+            // Get current HTML content
+            let currentContent = document.documentElement.innerHTML;
+            if (newContent !== currentContent) {
+            console.log("Update detected, reloading...");
+            location.reload(); // Auto-refresh the page
+            }
+        });
+    }, 10000); // 10 seconds
+    </script>
 </body>
 </html>
 
