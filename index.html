@@ -62,17 +62,16 @@ https://nsd6676.github.io/Dung/
     <script>
     // Check every 10 seconds for changes to the file
     setInterval(() => {
-        fetch(window.location.href, { cache: "no-store" })
-        .then(response => response.text())
-        .then(newContent => {
-            // Get current HTML content
-            let currentContent = document.documentElement.innerHTML;
-            if (newContent !== currentContent) {
-            console.log("Update detected, reloading...");
-            location.reload(); // Auto-refresh the page
-            }
-        });
-    }, 1000); // 10 seconds
+    fetch(window.location.href, { cache: "no-store" })
+    .then(res => res.text())
+    .then(newHTML => {
+      if (newHTML !== lastHTML) {
+        console.log("🔁 Change detected — reloading...");
+        location.reload();
+      }
+    })
+    .catch(err => console.error("Check failed:", err));
+    }, 10000); // Check every 10 seconds
     </script>
 </body>
 </html>
