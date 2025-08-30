@@ -60,7 +60,8 @@ https://nsd6676.github.io/Dung/
         </tbody>
     </table>
     <script>
-    // Check every 10 seconds for changes to the file
+    // Check every 1 seconds for changes to the file
+    let lastHTML = document.documentElement.innerHTML;
     setInterval(() => {
     fetch(window.location.href, { cache: "no-store" })
     .then(res => res.text())
